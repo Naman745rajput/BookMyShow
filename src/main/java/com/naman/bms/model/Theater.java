@@ -23,7 +23,10 @@ public class Theater {
     private String name;
 
     private String address;
+
+    @Column(nullable = false)
     private String city;
+
     private Integer totalScreens;
 
     @OneToMany(mappedBy = "theater", cascade = CascadeType.ALL)

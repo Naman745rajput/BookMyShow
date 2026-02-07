@@ -33,4 +33,7 @@ public class ShowSeat {
     @ManyToOne
     @JoinColumn(name="booking_id")
     private Booking booking;
+
+    @Version
+    private Long version; // For optimistic locking
 }

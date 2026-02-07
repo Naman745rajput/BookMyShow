@@ -19,7 +19,11 @@ public class UserService {
 
     public UserDto createUser(UserDto userDto)
     {
+        if (userRepository.findByEmail(userDto.getEmail()).isPresent()) {
+            throw new RuntimeException("Email already exists!"); // Or use a custom exception
+        }
         User user = mapToEntity(userDto);
+        user.setRole("ROLE_USER");
         User savedUser = userRepository.save(user);
         return mapToDto(savedUser);
 
@@ -67,6 +71,7 @@ public class UserService {
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPhoneNumber(userDto.getPhoneNumber());
+        user.setPassword(userDto.getPassword());
         return user;
     }
 

@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -32,5 +33,5 @@ public class Screen {
     private List<Show> shows;
 
     @OneToMany(mappedBy = "screen", cascade = CascadeType.ALL)
-    private List<Seat> seats;
+    private List<Seat> seats = new ArrayList<>();
 }

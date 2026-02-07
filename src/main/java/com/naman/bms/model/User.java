@@ -22,6 +22,9 @@ public class User {
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
+    private String role; // USER, ADMIN
+
     @Column(nullable = false, unique = true)
     private  String email;
 

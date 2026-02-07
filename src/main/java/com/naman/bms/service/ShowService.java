@@ -11,6 +11,7 @@ import com.naman.bms.repository.MovieRepository;
 import com.naman.bms.repository.ScreenRepository;
 import com.naman.bms.repository.ShowRepository;
 import com.naman.bms.repository.ShowSeatRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +34,10 @@ public class ShowService {
     @Autowired
     private ShowSeatRepository showSeatRepository;
 
+    @Autowired
+    private ShowSeatService showSeatService;
+
+    @Transactional
     public ShowDto createShow(ShowDto showDto)
     {
         Show show = new Show();
@@ -49,6 +54,8 @@ public class ShowService {
 
 
         Show savedShow = showRepository.save(show);
+
+        showSeatService.initializeShowSeats(savedShow.getId());
 
 
         List<ShowSeat> availableSeats = showSeatRepository

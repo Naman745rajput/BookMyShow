@@ -13,6 +13,8 @@ public interface ShowSeatRepository extends JpaRepository<ShowSeat,Long>
 {
     List<ShowSeat> findByShowId(Long movieId);
 
+    List<ShowSeat> findByBookingId(Long bookingId);
+
     List<ShowSeat> findByShowIdAndStatus(Long showId, String status);
 
 }

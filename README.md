@@ -6,7 +6,6 @@ the end-to-end lifecycle of
 movie ticket bookings, theater 
 schedules, and user authentication.
 
----
 
 ## Table of Contents
 1. [Project Overview](#-project-overview)
@@ -16,7 +15,6 @@ schedules, and user authentication.
 5. [API Documentation](#-api-documentation)
 6. [How to Run](#-how-to-run)
 
----
 
 ## Project Overview
 The **BookMyShow Backend** is 
@@ -162,14 +160,13 @@ The BookMyShow API is organized around REST principles. All request and response
 
 Follow these steps to set up and run the backend locally.
 
----
 
 ## 1. Prerequisites
 
 * **Java:** Ensure you have the Java Development Kit (JDK) installed.
 * **MySQL:** A running MySQL server instance.
 * **Maven:** To manage dependencies and build the project.
----
+
 
 ## 2. Build and Execution
 

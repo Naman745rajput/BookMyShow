@@ -8,7 +8,7 @@ schedules, and user authentication.
 
 
 ## Table of Contents
-1. [Project Overview](#-project-overview)
+1. [Project Overview](project-overview)
 2. [Technology Stack](#-technology-stack)
 3. [System Features](#-system-features)
 4. [Database Schema](#-database-architecture)

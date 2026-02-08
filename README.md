@@ -14,8 +14,7 @@ schedules, and user authentication.
 3. [System Features](#-system-features)
 4. [Database Schema](#-database-architecture)
 5. [API Documentation](#-api-documentation)
-6. [Exception Handling & Validation](#-exception-handling--validation)
-7. [How to Run](#-how-to-run)
+6. [How to Run](#-how-to-run)
 
 ---
 
@@ -167,36 +166,12 @@ Follow these steps to set up and run the backend locally.
 
 ## 1. Prerequisites
 
-- **Java:** JDK 17 or higher
-- **Database:** MySQL Server
-- **Build Tool:** Apache Maven
-
+* **Java:** Ensure you have the Java Development Kit (JDK) installed.
+* **MySQL:** A running MySQL server instance.
+* **Maven:** To manage dependencies and build the project.
 ---
 
-## 2. Database Setup
-
-1. Open your MySQL terminal or MySQL Workbench and create the database:
-
-```sql
-CREATE DATABASE bms_db;
-```
-
-2. Navigate to `src/main/resources/application.properties` and update it with your local MySQL credentials:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/bms_db?useSSL=false&serverTimezone=UTC
-spring.datasource.username=YOUR_MYSQL_USERNAME
-spring.datasource.password=YOUR_MYSQL_PASSWORD
-
-# Hibernate will automatically create the tables based on your Entities
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-```
-
----
-
-## 3. Build and Execution
+## 2. Build and Execution
 
 1. Open a terminal in the project root directory.
 
@@ -212,9 +187,11 @@ mvn clean install
 mvn spring-boot:run
 ```
 
+4.The API will be accessible at http://localhost:8080.
+
 ---
 
-## 4. Testing the API
+## 3. Testing the API
 
 Once the application starts successfully (default port: **8080**):
 
